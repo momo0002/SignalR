@@ -7,8 +7,7 @@ namespace ConsoleApp
 {
     public class Server
     {
-        private static IDisposable SignalR { get; set; }
-        const string ServerURI = "http://localhost:8080/signalr";
+        const string ServerURI = "http://localhost:8080";
 
         static void Main(string[] args)
         {
@@ -21,7 +20,11 @@ namespace ConsoleApp
         {
             try
             {
-                SignalR = WebApp.Start(ServerURI);
+                using (WebApp.Start(ServerURI))
+                {
+                    Console.WriteLine("Server running on {0}", ServerURI);
+                    Console.ReadLine();
+                }
             }
             catch (TargetInvocationException e)
             {

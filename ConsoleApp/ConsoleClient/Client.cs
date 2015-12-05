@@ -7,12 +7,26 @@ namespace ConsoleApp2
     public class Client
     {
         private static IHubProxy HubProxy { get; set; }
-        const string ServerURI = "http://localhost:8080";
+        const string ServerURI = "http://localhost:8080/signalr";
         private static HubConnection Connection { get; set; }
 
         static void Main(string[] args)
         {
             ConnectAsync();
+
+            string line = null;
+            while ((line = Console.ReadLine()) != null)
+            {
+                try
+                {
+                    HubProxy.Invoke("Send", line).Wait();
+                }
+                catch (HttpRequestException e)
+                {
+                    Console.WriteLine(e.InnerException);
+                }
+            }
+
             Console.ReadLine();
         }
 
@@ -20,6 +34,8 @@ namespace ConsoleApp2
         {
             Connection = new HubConnection(ServerURI);
             HubProxy = Connection.CreateHubProxy("ServerHub");
+
+            HubProxy.On("Send", message => Console.WriteLine(message));
 
             try
             {
@@ -32,17 +48,6 @@ namespace ConsoleApp2
                 //No connection: Don't enable Send button or show chat UI
                 return;
             }
-            var line = "Hello";
-
-            try
-            {
-                await HubProxy.Invoke("Send", line);
-            }
-            catch (HttpRequestException e)
-            {
-                Console.WriteLine(e.InnerException);
-            }
-                         
         }
     }
 }

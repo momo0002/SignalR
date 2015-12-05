@@ -1,0 +1,9 @@
+C:\Users\Moe\Desktop\SignalR\SignalRDemo\ConsoleApp\ConsoleClient2\bin\Debug\ConsoleClient2.exe.config
+C:\Users\Moe\Desktop\SignalR\SignalRDemo\ConsoleApp\ConsoleClient2\bin\Debug\ConsoleClient2.exe
+C:\Users\Moe\Desktop\SignalR\SignalRDemo\ConsoleApp\ConsoleClient2\bin\Debug\ConsoleClient2.pdb
+C:\Users\Moe\Desktop\SignalR\SignalRDemo\ConsoleApp\ConsoleClient2\bin\Debug\Microsoft.AspNet.SignalR.Client.dll
+C:\Users\Moe\Desktop\SignalR\SignalRDemo\ConsoleApp\ConsoleClient2\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Moe\Desktop\SignalR\SignalRDemo\ConsoleApp\ConsoleClient2\bin\Debug\Microsoft.AspNet.SignalR.Client.xml
+C:\Users\Moe\Desktop\SignalR\SignalRDemo\ConsoleApp\ConsoleClient2\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Moe\Desktop\SignalR\SignalRDemo\ConsoleApp\ConsoleClient2\obj\Debug\ConsoleClient2.exe
+C:\Users\Moe\Desktop\SignalR\SignalRDemo\ConsoleApp\ConsoleClient2\obj\Debug\ConsoleClient2.pdb

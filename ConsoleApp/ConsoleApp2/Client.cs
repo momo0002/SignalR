@@ -4,10 +4,10 @@ using System.Net.Http;
 
 namespace ConsoleApp2
 {   
-    class Program
+    public class Client
     {
         private static IHubProxy HubProxy { get; set; }
-        const string ServerURI = "http://localhost:23373/";
+        const string ServerURI = "http://localhost:8080";
         private static HubConnection Connection { get; set; }
 
         static void Main(string[] args)
@@ -19,12 +19,12 @@ namespace ConsoleApp2
         private static async void ConnectAsync()
         {
             Connection = new HubConnection(ServerURI);
-            HubProxy = Connection.CreateHubProxy("MyHub");
+            HubProxy = Connection.CreateHubProxy("ServerHub");
 
-            
             try
             {
-                await Connection.Start();                
+                //await Connection.Start().ContinueWith(t => Console.WriteLine("Connected.."));
+                await Connection.Start();
             }
             catch (HttpRequestException e)
             {
@@ -32,7 +32,17 @@ namespace ConsoleApp2
                 //No connection: Don't enable Send button or show chat UI
                 return;
             }
-            Console.WriteLine("Connected to server at " + ServerURI + Environment.NewLine);
+            var line = "Hello";
+
+            try
+            {
+                await HubProxy.Invoke("Send", line);
+            }
+            catch (HttpRequestException e)
+            {
+                Console.WriteLine(e.InnerException);
+            }
+                         
         }
     }
 }

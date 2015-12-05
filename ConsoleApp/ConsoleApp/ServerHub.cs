@@ -1,15 +1,17 @@
 ﻿using Microsoft.AspNet.SignalR;
+using Microsoft.AspNet.SignalR.Hubs;
 using System;
 using System.Threading.Tasks;
 
 namespace ConsoleApp
 {
-    public class MyHub : Hub
+    [HubName("ServerHub")]
+    public class ServerHub : Hub
     {
-        public void Send(string message, string time)
+        public void Send(string message)
         {
-            var context = GlobalHost.ConnectionManager.GetHubContext<MyHub>();
-            context.Clients.All.addMessage(message, time);
+            var context = GlobalHost.ConnectionManager.GetHubContext<ServerHub>();
+            context.Clients.All.addMessage(message);
         }
 
         public override Task OnConnected()

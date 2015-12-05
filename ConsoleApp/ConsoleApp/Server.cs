@@ -5,10 +5,10 @@ using Microsoft.Owin.Hosting;
 
 namespace ConsoleApp
 {
-    public class Program
+    public class Server
     {
         private static IDisposable SignalR { get; set; }
-        const string ServerURI = "http://localhost:23373/";
+        const string ServerURI = "http://localhost:8080/signalr";
 
         static void Main(string[] args)
         {
@@ -23,9 +23,9 @@ namespace ConsoleApp
             {
                 SignalR = WebApp.Start(ServerURI);
             }
-            catch (TargetInvocationException)
+            catch (TargetInvocationException e)
             {
-                Console.WriteLine("Server failed to start. A server is already running on " + ServerURI);
+                Console.WriteLine("Server failed to start. A server is already running on " + ServerURI + e.InnerException);
                 return;
             }
 

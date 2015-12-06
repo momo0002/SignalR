@@ -59,8 +59,6 @@ C:\Users\Moe\Desktop\SignalR\SignalRDemo\ConsoleApp\ConsoleApp2\bin\Debug\System
 C:\Users\Moe\Desktop\SignalR\SignalRDemo\ConsoleApp\ConsoleApp2\bin\Debug\System.Web.Http.Owin.xml
 C:\Users\Moe\Desktop\SignalR\SignalRDemo\ConsoleApp\ConsoleApp2\obj\Debug\ConsoleClient.csprojResolveAssemblyReference.cache
 C:\Users\Moe\Desktop\SignalR\SignalRDemo\ConsoleApp\ConsoleClient\bin\Debug\ConsoleApp2.exe.config
-C:\Users\Moe\Desktop\SignalR\SignalRDemo\ConsoleApp\ConsoleClient\obj\Debug\ConsoleApp2.exe
-C:\Users\Moe\Desktop\SignalR\SignalRDemo\ConsoleApp\ConsoleClient\obj\Debug\ConsoleApp2.pdb
 C:\Users\Moe\Desktop\SignalR\SignalRDemo\ConsoleApp\ConsoleClient\bin\Debug\ConsoleApp2.exe
 C:\Users\Moe\Desktop\SignalR\SignalRDemo\ConsoleApp\ConsoleClient\bin\Debug\ConsoleApp2.pdb
 C:\Users\Moe\Desktop\SignalR\SignalRDemo\ConsoleApp\ConsoleClient\bin\Debug\Microsoft.AspNet.SignalR.Client.dll
@@ -87,4 +85,5 @@ C:\Users\Moe\Desktop\SignalR\SignalRDemo\ConsoleApp\ConsoleClient\bin\Debug\Newt
 C:\Users\Moe\Desktop\SignalR\SignalRDemo\ConsoleApp\ConsoleClient\bin\Debug\System.Net.Http.Formatting.xml
 C:\Users\Moe\Desktop\SignalR\SignalRDemo\ConsoleApp\ConsoleClient\bin\Debug\System.Web.Http.xml
 C:\Users\Moe\Desktop\SignalR\SignalRDemo\ConsoleApp\ConsoleClient\bin\Debug\System.Web.Http.Owin.xml
-C:\Users\Moe\Desktop\SignalR\SignalRDemo\ConsoleApp\ConsoleClient\obj\Debug\ConsoleClient.csprojResolveAssemblyReference.cache
+C:\Users\Moe\Desktop\SignalR\SignalRDemo\ConsoleApp\ConsoleClient\obj\Debug\ConsoleApp2.exe
+C:\Users\Moe\Desktop\SignalR\SignalRDemo\ConsoleApp\ConsoleClient\obj\Debug\ConsoleApp2.pdb

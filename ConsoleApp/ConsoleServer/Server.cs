@@ -3,7 +3,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using Microsoft.Owin.Hosting;
 
-namespace ConsoleApp
+namespace ConsoleServer
 {
     public class Server
     {

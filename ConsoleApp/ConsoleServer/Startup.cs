@@ -1,11 +1,11 @@
-﻿using ConsoleApp;
+﻿using ConsoleServer;
 using Microsoft.Owin;
 using Microsoft.Owin.Cors;
 using Owin;
 
 
-[assembly: OwinStartup(typeof(ConsoleApp.Startup))]
-namespace ConsoleApp
+[assembly: OwinStartup(typeof(ConsoleServer.Startup))]
+namespace ConsoleServer
 {
     public class Startup
     {

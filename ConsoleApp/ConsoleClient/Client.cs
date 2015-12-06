@@ -2,7 +2,7 @@
 using System;
 using System.Net.Http;
 
-namespace ConsoleApp2
+namespace ConsoleClient
 {   
     public class Client
     {
@@ -17,9 +17,10 @@ namespace ConsoleApp2
             string line = null;
             while ((line = Console.ReadLine()) != null)
             {
+                var message = new Messages(line, DateTime.Now);
                 try
                 {
-                    HubProxy.Invoke("Send", line).Wait();
+                    HubProxy.Invoke("Send", message.ToString()).Wait();
                 }
                 catch (HttpRequestException e)
                 {

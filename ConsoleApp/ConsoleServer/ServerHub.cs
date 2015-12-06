@@ -3,7 +3,7 @@ using Microsoft.AspNet.SignalR.Hubs;
 using System;
 using System.Threading.Tasks;
 
-namespace ConsoleApp
+namespace ConsoleServer
 {
     [HubName("ServerHub")]
     public class ServerHub : Hub
